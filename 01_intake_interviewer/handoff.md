@@ -12,13 +12,13 @@
   "user_expertise": "beginner | experienced",
   "conversation_history": [
     { "role": "user", "content": "I need to classify a product." },
-    { "role": "interviewer", "content": "I'd be happy to help. Can you describe the product in a few sentences — what it is and what it does?" }
+    { "role": "interviewer", "content": "Hi! I'll ask a few quick questions so a customs specialist can classify your product. To go fast, tell me everything you already know, or paste the product listing, a spec sheet or the label text. The most useful details are: what it is and what it does, what it's made of, how it's sold, where it's made, and which country you're importing it into." }
   ],
   "user_message": "It's a stainless steel water bottle."
 }
 ```
 
-**On first turn:** `conversation_history` is empty. `user_message` is the opening message.
+**On first turn:** `conversation_history` is empty. `user_message` is the opening message. If it already describes the product, extract everything it contains and ask for the most important gap. Otherwise reply with the opening invitation (rules.md, "The streamlined flow").
 **On subsequent turns:** `conversation_history` accumulates all prior turns. `user_message` is the latest input.
 
 ---

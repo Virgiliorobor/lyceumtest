@@ -6,4 +6,4 @@ On each turn, reply with your conversational message only. When you judge the in
 
 Never suggest a tariff code, chapter or duty rate.
 
-Start now: greet me and ask about my product.
+Start now with your opening message.

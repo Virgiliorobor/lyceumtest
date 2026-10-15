@@ -6,7 +6,7 @@
 
 When a company imports a product, customs needs to put it in the right category. Each category has a number, the tariff (HTS) code, and the code decides the duty paid. To choose the code, someone first has to collect the right facts about the product: what it is made of, what it does, who uses it, how it is sold and where it is made.
 
-The **Intake Interviewer** is the first step of an AI classification assistant. It interviews you about a product, one question at a time, until it has those facts. Then it hands back a structured product profile in JSON. **It never gives a tariff code.** That is a later step and not part of this test.
+The **Intake Interviewer** is the first step of an AI classification assistant. It leads the conversation. First it invites you to share whatever you know, or to paste a product listing. Then it asks only for what's missing, one easy question at a time, and confirms a short summary with you. Finally it hands back a structured product profile in JSON. **It never gives a tariff code.** That is a later step and not part of this test.
 
 It was written for people who know nothing about customs, so you are exactly the right tester.
 
@@ -41,7 +41,7 @@ On each turn, reply with your conversational message only. When you judge the in
 
 Never suggest a tariff code, chapter or duty rate.
 
-Start now: greet me and ask about my product.
+Start now with your opening message.
 ```
 
 ## Pick a product
@@ -63,6 +63,7 @@ Each test is one new chat. Do as many as you have time for.
 3. **Try to break the rules.** Ask "So what's the tariff code?" and later "How much duty will I pay?". It should politely decline and keep interviewing.
 4. **Act like an expert.** Say you are an experienced customs broker and paste all the details at once. It should move faster and may group questions.
 5. **Mexico and Spanish.** Use fact sheet 5, or say "voy a importar a México". It should record Mexico as the jurisdiction and default to Spanish.
+6. **Paste everything at once.** Copy a whole fact sheet, or a real product listing from an online shop, as your very first answer. It should pick out what it needs and ask only for what's missing: often just one or two questions, then a summary to confirm.
 
 ## What to check
 
@@ -70,23 +71,32 @@ Mark each **Yes / Partly / No**, with a note if useful. You can copy this list i
 
 ```text
 Tester:            AI and model used:
-Product:           Test(s) run (1-5):
+Product:           Test(s) run (1-6):
 Questions asked before it finished:
 
-1.  Asked one question at a time:
-2.  Confirmed what I said before asking the next question:
-3.  Used plain words, and explained any customs term it used:
-4.  Pushed for specific materials when I was vague:
-5.  When I said "I don't know", helped me describe the product instead of giving up:
-6.  Asked what the product does AND who uses it:
-7.  Asked how it is sold (single item, set, pack, kit, assembled or not):
-8.  Asked where it is made:
-9.  Asked which country I am importing into, or worked it out:
-10. Asked the right context question for my product (what a part goes into, who eats a food, what device an accessory works with, where a finished product is used):
-11. Never gave a tariff code, chapter or duty rate, even when I asked:
-12. Never asked for something I had already told it:
-13. Ended with a complete JSON profile (every field filled, search_hints present):
-14. The profile matches what I said, with nothing invented:
+How it guided me
+1.  Its first message invited me to share everything I know (or paste a listing) and said which details help most:
+2.  Asked only for what was missing, never for something I had already told it:
+3.  Asked one short, easy question at a time, with options or examples when useful:
+4.  I always knew what to answer next (every turn ended with a clear question):
+5.  Told me when it was nearly done:
+6.  Showed me a summary and asked me to confirm before finishing:
+7.  Finished in a reasonable number of questions (about 5-8 as a beginner, 1-3 as an expert):
+
+What it asked
+8.  Pushed for specific materials when I was vague:
+9.  When I said "I don't know", helped me (where to look, a simple physical question) instead of giving up or getting stuck:
+10. Asked what the product does AND who uses it:
+11. Asked how it is sold (single item, set, pack, kit, assembled or not):
+12. Asked where it is made:
+13. Asked which country I am importing into, or worked it out and checked with me:
+14. Asked the right context question for my product (what a part goes into, who eats a food, what device an accessory works with, where a finished product is used):
+15. Used plain words, and explained any customs term it used:
+
+What it produced
+16. Never gave a tariff code, chapter or duty rate, even when I asked:
+17. Ended with a complete JSON profile (every field filled, search_hints, jurisdiction and output_language present):
+18. The profile matches what I said, with nothing invented:
 
 Overall score (1-5):
 Comments:
