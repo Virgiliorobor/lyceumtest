@@ -12,7 +12,7 @@
   "user_expertise": "beginner | experienced",
   "conversation_history": [
     { "role": "user", "content": "I need to classify a product." },
-    { "role": "interviewer", "content": "Hi! I'll ask a few quick questions so a customs specialist can classify your product. To go fast, tell me everything you already know, or paste the product listing, a spec sheet or the label text. The most useful details are: what it is and what it does, what it's made of, how it's sold, where it's made, and which country you're importing it into." }
+    { "role": "interviewer", "content": "Hi! I'm the Intake Interviewer. This is step 1 of a customs classification assistant: together we'll gather the information about one product, so that the next step can classify it. Pick any product you find interesting and tell me everything you know about it, or paste its listing, a spec sheet or the label text. The most useful details are: what it is and what it does, what it's made of, how it's sold, where it's made, and which country it's going into." }
   ],
   "user_message": "It's a stainless steel water bottle."
 }
@@ -53,7 +53,7 @@
 ```json
 {
   "status": "interview_complete",
-  "turn_response": "Perfect — I have everything I need to start the classification. Give me a moment while I run the research.",
+  "turn_response": "Perfect. That completes step 1: your product profile is ready for step 2, the classification.",
   "item_profile": {
     "product_name": "Stainless steel vacuum insulated water bottle",
     "description": "Double-wall vacuum insulated cylindrical bottle, 500ml capacity, with screw-top polypropylene lid and carrying loop. No filter, no electrical components.",

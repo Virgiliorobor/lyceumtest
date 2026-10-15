@@ -15,9 +15,9 @@ You only need **one file**: [AI_READ_FIRST.md](AI_READ_FIRST.md). It tells your 
      Open https://raw.githubusercontent.com/Virgiliorobor/lyceumtest/main/AI_READ_FIRST.md and follow it.
      ```
    - **Or attach the file.** Open [AI_READ_FIRST.md](AI_READ_FIRST.md), press the download button ("Download raw file") at the top right, then attach it to the chat and send.
-3. **That's it.** The AI becomes the interviewer and asks you its first question. Answer it, using one of the [product fact sheets](#pick-a-product) below if you like.
+3. **That's it.** The AI becomes the interviewer, explains that this is step 1, and asks you to pick a product you find interesting. Tell it about any product you like, or use one of the [product fact sheets](#pick-a-product) below.
 
-**At the end you get a product profile, not a tariff code.** That is on purpose (see below).
+**This tests step 1 only:** gathering the information about a product so that the next step can classify it. At the end you get a product profile, not a tariff code. That is on purpose (see below).
 
 If the AI replies with a summary of the file or asks what to do, it didn't follow the instructions. Write "Start the interview" and note it in your results.
 
@@ -25,7 +25,7 @@ If the AI replies with a summary of the file or asks what to do, it didn't follo
 
 When a company imports a product, customs needs to put it in the right category. Each category has a number, the tariff (HTS) code, and the code decides the duty paid. To choose the code, someone first has to collect the right facts about the product: what it is made of, what it does, who uses it, how it is sold and where it is made.
 
-The **Intake Interviewer** is the first step of an AI classification assistant. It leads the conversation. First it invites you to share whatever you know, or to paste a product listing. Then it asks only for what's missing, one easy question at a time, and confirms a short summary with you. Finally it hands back a structured product profile in JSON. **It never gives a tariff code.** That is a later step and not part of this test.
+The **Intake Interviewer** is the first step of an AI classification assistant. It leads the conversation. First it invites you to share whatever you know, or to paste a product listing. Then it asks only for what's missing, one easy question at a time, and confirms a short summary with you. Finally it hands back a structured product profile in JSON. **It never gives a tariff code.** It is **step 1**: its job is to gather the product's information so that **step 2, the classification**, can find the code. Step 2 is not part of this test.
 
 It was written for people who know nothing about customs, so you are exactly the right tester.
 
@@ -44,6 +44,8 @@ It was written for people who know nothing about customs, so you are exactly the
 
 ```text
 You are the Intake Interviewer described in the four attached files (identity.md, rules.md, examples.md, handoff.md). Follow them exactly.
+
+This is step 1 of a customs classification assistant: gather the information about one product I choose, so that the next step can classify it. Do not classify it yourself.
 
 This is a test, so there is no orchestrator: talk with me directly. Treat me as user_expertise: beginner unless I tell you I am experienced. If you need to know which country the goods are imported into, ask me.
 
@@ -85,7 +87,7 @@ Product:           Test(s) run (1-6):
 Questions asked before it finished:
 
 How it guided me
-1.  Its first message invited me to share everything I know (or paste a listing) and said which details help most:
+1.  Its first message explained this is step 1 (gathering the facts for the classification), invited me to pick a product, share what I know (or paste a listing), and said which details help most:
 2.  Asked only for what was missing, never for something I had already told it:
 3.  Asked one short, easy question at a time, with options or examples when useful:
 4.  I always knew what to answer next (every turn ended with a clear question):

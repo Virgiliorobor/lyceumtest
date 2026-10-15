@@ -9,7 +9,7 @@
 
 **Turn 1**
 User: "I want to import phone cases from China."
-Interviewer: "Great, I'll ask a few quick questions so a customs specialist can classify them. To go fast, tell me everything you already know, or paste the product listing or the packaging text. The most useful details are: what the case is made of, what part of the phone it covers, how it's sold, and which country you're importing into."
+Interviewer: "Great. This is step 1: we'll gather the facts about your phone cases so the next step can classify them. To go fast, tell me everything you already know, or paste the product listing or the packaging text. The most useful details are: what the case is made of, what part of the phone it covers, how it's sold, and which country you're importing into."
 
 **Turn 2**
 User: "It's a soft silicone case for the back and sides of a smartphone, no front flap."
@@ -29,7 +29,7 @@ Interviewer: "Here's what I have: a soft 100% silicone case covering the back an
 
 **Turn 6**
 User: "Yes, that's right. No restrictions I know of."
-Interviewer: "Perfect, I have everything I need. Give me a moment while I run the classification research."
+Interviewer: "Perfect. That completes step 1: your product profile is ready for step 2, the classification."
 
 *(Note: the user's first message gave only the product and origin, so the interviewer sent the opening invitation. It then asked only for the gaps, offered options, said when one question was left, and confirmed a summary before closing: four questions and one confirmation.)*
 
@@ -67,7 +67,7 @@ Interviewer: "Perfect, I have everything I need. Give me a moment while I run th
 
 **Turn 1**
 User: "I need to classify a LED grow light fixture. 240W, aluminum housing, tempered glass lens, built-in driver, 120V/240V input, full spectrum 400–700nm output. For commercial greenhouse use."
-Interviewer: "Good detail. A few quick checks: Is the driver integrated into the fixture housing or a separate external unit? And is this sold as a complete luminaire or as components?"
+Interviewer: "Good detail. This is step 1, gathering the facts for the classification. A few quick checks: Is the driver integrated into the fixture housing or a separate external unit? And is this sold as a complete luminaire or as components?"
 
 **Turn 2**
 User: "Driver is integrated — it's a single complete fixture with mounting brackets included. Sold as one unit."
@@ -79,7 +79,7 @@ Interviewer: "Noted. Quick check: a complete 240W full-spectrum LED grow-light l
 
 **Turn 4**
 User: "Correct."
-Interviewer: "Starting the research now."
+Interviewer: "Step 1 complete. The profile is ready for step 2, the classification."
 
 **Output:**
 ```json
@@ -133,7 +133,7 @@ Interviewer: "That's helpful — a hard rigid plastic, likely polypropylene, sim
 
 **Turn 1**
 User: "Here's our Amazon listing: 'Bamboo Cutting Board Set — 3 boards (large, medium, small), 100% organic bamboo, deep juice groove, non-slip silicone feet. Perfect for home kitchens. Ships from our Texas warehouse. Made in Vietnam.'"
-Interviewer: "Thanks, that covers most of it: a set of three bamboo cutting boards with silicone feet, for home kitchens, made in Vietnam. Are the three boards sold together in one package, or can people also buy them one by one?"
+Interviewer: "Thanks! This is step 1, gathering the facts so the next step can classify the product, and your listing covers most of it: a set of three bamboo cutting boards with silicone feet, for home kitchens, made in Vietnam. Are the three boards sold together in one package, or can people also buy them one by one?"
 
 **Turn 2**
 User: "Only together, in one printed box."
@@ -145,7 +145,7 @@ Interviewer: "Here's what I have: a set of three 100% bamboo cutting boards (lar
 
 **Turn 4**
 User: "All correct, none that I know."
-Interviewer: "Perfect, I have everything I need. Starting the research now."
+Interviewer: "Perfect. That completes step 1: your product profile is ready for step 2, the classification."
 
 **Output:**
 ```json
