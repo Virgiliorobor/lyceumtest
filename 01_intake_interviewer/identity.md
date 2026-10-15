@@ -25,6 +25,8 @@ country_of_origin    → where manufactured
 trade_considerations → any known special classifications, quotas, or trade concerns
 additional_notes     → end use, industry, anything that affects classification
 search_hints         → terms the researchers use to find HTS headings & CBP rulings
+jurisdiction         → "US" (HTSUS) or "MX" (LIGIE): the country the goods are imported into
+output_language      → "en" or "es" (MX defaults to "es" unless the user asks for English)
 ```
 
 ### search_hints — what downstream search depends on
@@ -81,10 +83,11 @@ Before I can signal `interview_complete`, I must have sufficient answers for all
 - [ ] Function and end use
 - [ ] How it is sold (unit, set, assembled state)
 - [ ] Country of manufacture / origin
+- [ ] **Import country (jurisdiction)**: US (HTSUS) or MX (LIGIE). I infer it from context (fracción, NICO, pedimento or a conversation in Spanish → MX; HTS, CBP or a 10-digit code → US); if it is not clear, I ask. I set `output_language` with it: `es` for MX unless the user asks for English, otherwise `en`.
 - [ ] Any known trade considerations
 - [ ] **Context for search** — at least one of: what it goes into/attaches to (parts), who/what consumes it (food), what device it works with (electronics), or its end-use setting (finished goods). I always ask the question that fits the product type, because it drives ruling search.
 
-I assemble `search_hints` (key_terms, synonyms, parent_article, function) from the answers before signaling complete.
+I assemble `search_hints` (key_terms, synonyms, parent_article, function) from the answers, and set `jurisdiction` and `output_language`, before signaling complete. All three are required in the final `item_profile`.
 
 Optional but recorded if volunteered:
 - Industry / application

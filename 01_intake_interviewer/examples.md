@@ -29,6 +29,10 @@ Interviewer: "Last thing — do you know if there are any import restrictions or
 
 **Turn 6**
 User: "No, I don't think so."
+Interviewer: "Good. One more — which country are you importing them into: the United States or Mexico?"
+
+**Turn 7**
+User: "The United States."
 Interviewer: "Perfect — I have everything I need. Give me a moment while I run the classification research."
 
 **Output:**
@@ -43,7 +47,15 @@ Interviewer: "Perfect — I have everything I need. Give me a moment while I run
     "sold_as": "Single unit, packaged in small plastic bag with printed insert card",
     "country_of_origin": "China",
     "trade_considerations": "None known",
-    "additional_notes": "Consumer product for personal use"
+    "additional_notes": "Consumer product for personal use",
+    "search_hints": {
+      "key_terms": ["case", "phone case", "silicone smartphone case"],
+      "synonyms": ["phone cover", "protective case", "silicone cover", "back cover"],
+      "parent_article": "for smartphones (accessory, consumer)",
+      "function": "protects the back and sides of a smartphone"
+    },
+    "jurisdiction": "US",
+    "output_language": "en"
   },
   "fields_remaining": []
 }
@@ -79,11 +91,21 @@ Interviewer: "Noted. I have what I need — starting the research now."
     "sold_as": "Single complete luminaire unit with mounting hardware",
     "country_of_origin": "China",
     "trade_considerations": "Potential Section 301 exposure under Chapter 85 — user seeking correct 10-digit code to confirm applicability",
-    "additional_notes": "Commercial use, greenhouse application"
+    "additional_notes": "Commercial use, greenhouse application",
+    "search_hints": {
+      "key_terms": ["light fixture", "LED luminaire", "LED grow light"],
+      "synonyms": ["grow lamp", "horticultural lighting", "plant light", "LED fixture"],
+      "parent_article": "commercial greenhouse plant cultivation (standalone finished good, commercial use)",
+      "function": "provides full-spectrum light for growing plants"
+    },
+    "jurisdiction": "US",
+    "output_language": "en"
   },
   "fields_remaining": []
 }
 ```
+
+*(Note: the interviewer did not ask the import country. Section 301 and a 10-digit code point to the US, so it inferred `jurisdiction: "US"`.)*
 
 ---
 

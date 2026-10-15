@@ -113,7 +113,9 @@ The final message ends with JSON like this, from `handoff.md`:
       "synonyms": ["flask", "tumbler", "thermos", "drinkware"],
       "parent_article": "personal beverage container (standalone consumer good, household)",
       "function": "stores and insulates hot and cold beverages"
-    }
+    },
+    "jurisdiction": "US",
+    "output_language": "en"
   },
   "fields_remaining": []
 }

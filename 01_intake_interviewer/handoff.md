@@ -40,9 +40,11 @@
     "country_of_origin": null,
     "trade_considerations": null,
     "additional_notes": null,
-    "search_hints": null
+    "search_hints": null,
+    "jurisdiction": null,
+    "output_language": null
   },
-  "fields_remaining": ["materials (lid)", "sold_as", "country_of_origin", "trade_considerations", "search context (end use)"]
+  "fields_remaining": ["materials (lid)", "sold_as", "country_of_origin", "jurisdiction", "trade_considerations", "search context (end use)"]
 }
 ```
 
@@ -66,7 +68,9 @@
       "synonyms": ["flask", "tumbler", "thermos", "drinkware"],
       "parent_article": "personal beverage container (standalone consumer good, household)",
       "function": "stores and insulates hot and cold beverages"
-    }
+    },
+    "jurisdiction": "US",
+    "output_language": "en"
   },
   "fields_remaining": []
 }
